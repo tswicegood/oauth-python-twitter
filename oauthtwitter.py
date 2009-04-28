@@ -40,19 +40,6 @@ class OAuthApi(Api):
 
     def _GetOpener(self):
         opener = self._urllib.build_opener()
-        #opener.addheaders = self._request_headers.items()
-        return opener
-        if username and password:
-          #self._AddAuthorizationHeader(username, password)
-          #handler = self._urllib.HTTPBasicAuthHandler()
-          #(scheme, netloc, path, params, query, fragment) = urlparse.urlparse(url)
-          #handler.add_password(Api._API_REALM, netloc, username, password)
-          #opener = self._urllib.build_opener(handler)
-          pass
-        else:
-          opener = self._urllib.build_opener()
-        opener = self._urllib.build_opener()
-        opener.addheaders = self._request_headers.items()
         return opener
 
     def _FetchUrl(self,
@@ -107,14 +94,10 @@ class OAuthApi(Api):
             url = req.to_url()
             encoded_post_data = ""
             
-        print "EP",extra_params
-        print "URL", url
-        print "EPD", encoded_post_data
         no_cache=True
         # Open and return the URL immediately if we're not going to cache
         # OR we are posting data
         if encoded_post_data or no_cache:
-          print "No cahce"
           if encoded_post_data:
               url_data = opener.open(url, encoded_post_data).read()
           else:
