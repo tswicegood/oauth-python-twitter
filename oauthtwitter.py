@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # 
-# Copyright under GPLv3
+# Copyright under  the latest LGPL
 
 '''A class the inherits everything from python-twitter and allows oauth based access
 
@@ -11,7 +11,7 @@ Requires:
 '''
 
 __author__ = "Hameedullah Khan <hameed@hameedkhan.net>"
-__version__ = "0.1"
+__version__ = "0.2"
 
 
 from twitter import Api, User
