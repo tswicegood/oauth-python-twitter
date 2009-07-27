@@ -16,7 +16,8 @@ __version__ = "0.2"
 
 from twitter import Api, User
 
-import simplejson, oauth
+import simplejson
+from oauth import oauth
 
 
 
